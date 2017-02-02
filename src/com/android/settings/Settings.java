@@ -656,4 +656,6 @@ public class Settings extends SettingsActivity {
     public static class SafetyCenterActivity extends SettingsActivity { }
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+    // Running services
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }

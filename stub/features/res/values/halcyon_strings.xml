@@ -226,4 +226,10 @@
     <string name="show_progress_bar_chip_title">Show ongoing action progress bar chip</string>
     <string name="show_progress_bar_chip_summary">Display a progress bar chip for ongoing actions in the status bar</string>
 
+    <!-- Hide developer status -->
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
+    <string name="hide_developer_status_title">Hide developer status</string>
+    <string name="hide_developer_status_summary">Hide developer status from apps</string>
+
 </resources>

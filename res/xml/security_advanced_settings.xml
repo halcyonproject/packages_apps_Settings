@@ -123,7 +123,7 @@
         settings:controller="com.android.settings.security.MemtagPagePreferenceController" />
 
     <com.android.settings.halcyon.preference.GlobalSettingSwitchPreference
-        android:order="92"
+        android:order="93"
         android:key="window_ignore_secure"
         android:title="@string/ignore_window_secure_title"
         android:summary="@string/ignore_window_secure_summary"
@@ -136,6 +136,13 @@
         android:summary="@string/hide_developer_status_summary"
         android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
         settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />
+
+    <Preference
+        android:order="92"
+        android:key="hide_applist_setting"
+        android:title="@string/hide_applist_title"
+        android:summary="@string/hide_applist_summary"
+        android:fragment="com.android.settings.security.HideAppListSettings" />
 
     <!-- work profile security section -->
     <PreferenceCategory

@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="duration_less_than_one_minute">Meno di 1 minuto</string>
+    <string name="screen_time_summary_usage_today">%1$s oggi</string>
+    <string name="density_category">Opzioni di densità</string>
+    <string name="background_processes_settings_title">Processo in background</string>
+    <string name="advanced">Opzioni avanzate</string>
+    <string name="reset">Reset</string>
+    <string name="live_display_summary">Ottimizzare lo schermo in base all\'ora del giorno e alle condizioni ambientali per migliorare la leggibilità e ridurre l\'affaticamento degli occhi.</string>
+</resources>

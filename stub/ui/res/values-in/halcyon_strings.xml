@@ -10,31 +10,25 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- About Phone -->
     <string name="keywords_top_level_device_info">tentang ponsel, halcyon, nama perangkat</string>
     <string name="more_device_info">Lebih banyak</string>
     <string name="more_device_info_summary">Tampilkan informasi perangkat</string>
-
     <!-- About Phone Header -->
     <string name="halcyon_device_title">Perangkat</string>
     <string name="halcyon_memory_storage_title">Memori</string>
     <string name="halcyon_battery_size_title">Kapasitas baterai</string>
     <string name="halcyon_screen_res_title">Resolusi layar</string>
-
-        <!-- My Device - Phone Number Category -->
+    <!-- My Device - Phone Number Category -->
     <string name="sim_num_info_cat">Nomor telfon</string>
-
     <!-- System Category -->
     <string name="more_settings_title">Lainnya</string>
-
     <!-- More category -->
     <string name="more_preference_title">Lebih banyak</string>
     <string name="more_battery_title">Opsi setelan baterai lainnya</string>
-
     <!-- Battery Summary -->
     <string name="tile_battery_info_title">Informasi baterai</string>
-
+    <string name="very_cool_branding">h.</string>
+    <string name="very_cool_version">Ursinia</string>
 </resources>

@@ -1,2 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="cancel">Anuluj</string>
+    <string name="battery_technology">Technologia</string>
+    <string name="adj_contrast_title">Kontrast</string>
+    <string name="advanced">Zaawansowane</string>
+    <string name="live_display_day">Dzień</string>
+    <string name="live_display_night">Noc</string>
+    <string name="live_display_color_profile_standard_title">Standardowy</string>
+    <string name="live_display_color_profile_natural_title">Naturalny</string>
+    <string name="live_display_color_profile_dynamic_title">Dynamiczny</string>
+    <string name="live_display_color_profile_cinema_title">Kino</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomia</string>
+    <string name="live_display_color_profile_photography_title">Fotografia</string>
+    <string name="live_display_color_profile_basic_title">Prosty</string>
+    <string name="live_display_color_profile_reading_title">Czytanie</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="color_red_title">Czerwony</string>
+    <string name="color_green_title">Zielony</string>
+    <string name="color_blue_title">Niebieski</string>
+    <string name="adj_saturation_title">Nasycenie</string>
+    <string name="adj_intensity_title">Intensywność</string>
+    <string name="charging_control_limit_title">Limit</string>
+    <string name="ok">Uruchom ponownie</string>
+    <string name="search">Szukaj</string>
+    <string name="battery_health_good">Dobra</string>
+    <string name="battery_health_unknown">Nieznana</string>
+    <string name="battery_temperature">Temperatura</string>
+    <string name="status_bar_battery_style_circle">Kółko</string>
+    <string name="status_bar_battery_style_text">Tekst</string>
+    <string name="status_bar_battery_percentage_default">Ukryte</string>
+    <string name="display_rotation_unit">stopni</string>
+    <string name="network_options_title">Opcje</string>
+    <string name="battery_health_overheat">Przegrzanie</string>
+    <string name="battery_voltage">Napięcie</string>
+</resources>

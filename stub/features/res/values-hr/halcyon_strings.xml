@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="background_processes_settings_title">Pozadinski procesi</string>
+    <string name="advanced">Napredno</string>
+    <string name="reset">Resetiranje</string>
+    <string name="screen_time_summary_usage_today">Sažetak današnje upotrebe ekrana</string>
+    <string name="duration_less_than_one_minute">Trajanje manje od 1 minute</string>
+</resources>

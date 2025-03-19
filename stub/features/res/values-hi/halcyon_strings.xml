@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="screen_time_summary_usage_today">%1$s आज</string>
+    <string name="density_category">घनत्व विकल्प</string>
+    <string name="background_processes_settings_title">पृष्ठभूमि में प्रक्रिया</string>
+    <string name="advanced">विकसित</string>
+    <string name="reset">रीसेट करें</string>
+    <string name="live_display_mode">प्रदर्शन मोड</string>
+    <string name="live_display_color_temperature_title">रंग तापमान</string>
+    <string name="live_display_color_temperature_summary">दिन: <xliff:g id="day_temperature">%1$d</xliff:g>K रात: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">दिन</string>
+    <string name="live_display_night">रात</string>
+    <string name="live_display_anti_flicker_title">झिलमिलाहट विरोधी</string>
+    <string name="live_display_low_power_title">बिजली की खपत कम करें</string>
+    <string name="live_display_low_power_summary">गुणवत्ता कम किए बिना न्यूनतम बिजली खपत के लिए डिस्प्ले समायोजित करें</string>
+    <string name="live_display_enhance_color_title">रंग बढ़ाएं</string>
+    <string name="live_display_enhance_color_summary">त्वचा के रंग, दृश्यों और अन्य छवियों की रंग जीवंतता में सुधार करें</string>
+    <string name="live_display_color_profile_title">रंग प्रोफ़ाइल</string>
+    <string name="live_display_color_profile_standard_title">मानक</string>
+    <string name="live_display_color_profile_standard_summary">सटीक रंग और उज्ज्वल सफेद</string>
+    <string name="live_display_color_profile_natural_title">स्वाभाविक</string>
+    <string name="live_display_color_profile_cinema_title">सिनेमा</string>
+    <string name="live_display_color_profile_cinema_summary">वीडियो के लिए उत्तम रंग पुनरुत्पादन</string>
+    <string name="live_display_color_profile_astronomy_title">खगोलशास्त्र</string>
+    <string name="live_display_color_profile_photography_title">फोटोग्राफी</string>
+    <string name="live_display_color_profile_photography_summary">फोटो के लिए उत्तम रंग पुनरुत्पादन</string>
+    <string name="live_display_color_profile_basic_title">बेसिक</string>
+    <string name="live_display_color_profile_adaptive_title">अनुकूली</string>
+    <string name="duration_less_than_one_minute">1 मिनट से कम</string>
+    <string name="live_display_outdoor_mode_title">स्वचालित आउटडोर मोड</string>
+    <string name="live_display_color_profile_astronomy_summary">रात्रि दृष्टि बनाए रखने के लिए गहरा लाल</string>
+    <string name="live_display_color_profile_dynamic_title">गतिशील</string>
+    <string name="live_display_color_profile_basic_summary">डिस्प्ले को बिना अंशांकन के उपयोग करें</string>
+    <string name="live_display_anti_flicker_summary">कम रोशनी में अधिक झिलमिलाहट को रोकें और आंखों पर जोर कम करें। इससे रंग सटीकता प्रभावित हो सकती है और कुछ आइटम का प्रदर्शन बदल सकता है।</string>
+    <string name="live_display_color_profile_natural_summary">यथार्थपूर्ण रंग और त्वचा के रंग संयोजन</string>
+    <string name="live_display_summary">समय और परिवेश के अनुसार अपनी स्क्रीन को अनुकूलित करें ताकि पठनीयता में सुधार हो और आंखों पर जोर कम हो</string>
+    <string name="live_display_outdoor_mode_summary">तेज धूप में स्वचालित रूप से चमक और संतृप्ति बढ़ाएं</string>
+    <string name="live_display_color_profile_dynamic_summary">बढ़े हुए रंग और उज्ज्वल सफेद</string>
+</resources>

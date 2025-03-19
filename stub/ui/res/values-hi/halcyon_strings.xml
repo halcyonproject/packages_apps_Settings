@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="very_cool_branding">ह।</string>
+    <string name="very_cool_version">उर्सिनिया</string>
+    <string name="keywords_top_level_device_info">फ़ोन के बारे में, हल्सियॉन, डिवाइस का नाम</string>
+    <string name="more_device_info">और जानकारी</string>
+    <string name="more_device_info_summary">डिवाइस की अधिक जानकारी दिखाएं</string>
+    <string name="halcyon_device_title">उपकरण</string>
+    <string name="halcyon_memory_storage_title">मेमोरी</string>
+    <string name="halcyon_battery_size_title">बैटरी की क्षमता</string>
+    <string name="halcyon_screen_res_title">स्क्रीन रिज़ॉल्यूशन</string>
+    <string name="sim_num_info_cat">फ़ोन नंबर</string>
+    <string name="more_settings_title">अधिक सेटिंग्स</string>
+    <string name="more_preference_title">अधिक</string>
+    <string name="more_battery_title">अधिक बैटरी विकल्प</string>
+    <string name="tile_battery_info_title">बैटरी जानकारी</string>
+</resources>

@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="halcyon_device_title">Peranti</string>
+    <string name="halcyon_memory_storage_title">Memori</string>
+    <string name="halcyon_battery_size_title">Kapasiti Bateri</string>
+    <string name="halcyon_screen_res_title">Resolusi Skrin</string>
+    <string name="sim_num_info_cat">Nombor telefon</string>
+</resources>

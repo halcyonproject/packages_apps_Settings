@@ -403,4 +403,8 @@
     <string name="hide_from_launcher_title">Hide from launcher</string>
     <string name="hide_from_launcher_summary">Prevent this application from showing up in any launcher. Requires a launcher restart for changes to take effect.</string>
 
+    <!-- Global Actions -->
+    <string name="power_off_verify_summary">When your device is locked, you\'ll need to use your password to power off or restart.</string>
+    <string name="power_off_verify_title">Power off verify</string>
+
 </resources>

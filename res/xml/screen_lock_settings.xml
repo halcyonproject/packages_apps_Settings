@@ -59,6 +59,11 @@
         android:key="power_button_instantly_locks"
         android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" />
 
+    <com.android.settings.halcyon.preference.SecureSettingSwitchPreference
+        android:title="@string/power_off_verify_title"
+        android:key="power_off_verify"
+        android:summary="@string/power_off_verify_summary"/>
+
     <com.android.settings.halcyon.preference.SystemSettingSwitchPreference
         android:key="lockscreen_enable_power_menu"
         android:title="@string/lockscreen_enable_power_menu_title"

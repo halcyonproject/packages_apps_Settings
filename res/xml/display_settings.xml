@@ -82,6 +82,12 @@
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
 
+        <com.android.settings.halcyon.preference.GlobalSettingSwitchPreference
+            android:key="show_progress_bar_chip"
+            android:title="@string/show_progress_bar_chip_title"
+            android:summary="@string/show_progress_bar_chip_summary"
+            android:defaultValue="true"/>
+            
         <Preference
             android:fragment="com.android.settings.accessibility.TextReadingPreferenceFragment"
             android:key="text_reading_options"

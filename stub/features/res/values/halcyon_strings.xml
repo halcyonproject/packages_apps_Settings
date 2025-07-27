@@ -222,4 +222,8 @@
     <string name="icon_manager_title">Icon manager</string>
     <string name="icon_manager_summary">Control visibility of status bar icons</string>
 
+    <!-- Ongoing action progress bar chip -->
+    <string name="show_progress_bar_chip_title">Show ongoing action progress bar chip</string>
+    <string name="show_progress_bar_chip_summary">Display a progress bar chip for ongoing actions in the status bar</string>
+
 </resources>

@@ -77,12 +77,23 @@
             settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
     </com.android.settingslib.widget.UntitledPreferenceCategory>
 
-    <Preference
-        android:key="charging_control"
-        android:title="@string/charging_control_title"
-        android:summary="@string/charging_control_summary"
-        android:fragment="com.android.settings.lineage.health.ChargingControlSettings"
-        settings:controller="com.android.settings.lineage.health.ChargingControlPreferenceController" />
+    <com.android.settingslib.widget.UntitledPreferenceCategory
+        android:key="charging_category">
+        <Preference
+            android:key="charging_control"
+            android:title="@string/charging_control_title"
+            android:summary="@string/charging_control_summary"
+            android:fragment="com.android.settings.lineage.health.ChargingControlSettings"
+            settings:controller="com.android.settings.lineage.health.ChargingControlPreferenceController" />
+
+        <ListPreference
+            android:entries="@*android:array/charging_speed_entries"
+            android:entryValues="@*android:array/charging_speed_values"
+            android:key="charging_speed"
+            android:summary="%s"
+            android:title="@*android:string/charging_speed"
+            settings:controller="com.android.settings.fuelgauge.ChargingSpeedPreferenceController" />
+    </com.android.settingslib.widget.UntitledPreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"

@@ -35,7 +35,7 @@ import com.android.settings.emergency.EmergencyDashboardFragment;
 import com.android.settings.enterprise.EnterprisePrivacySettings;
 import com.android.settings.fuelgauge.SmartBatterySettings;
 import com.android.settings.fuelgauge.batterysaver.BatterySaverSettings;
-import com.android.settings.fuelgauge.batteryusage.PowerUsageSummary;
+import com.android.settings.fuelgauge.MoreBatterySettings;
 import com.android.settings.gestures.GestureSettings;
 import com.android.settings.homepage.TopLevelSettings;
 import com.android.settings.network.NetworkDashboardFragment;
@@ -82,7 +82,7 @@ public class DashboardFragmentRegistry {
                 CategoryKey.CATEGORY_DEVICE);
         PARENT_TO_CATEGORY_KEY_MAP.put(AppDashboardFragment.class.getName(),
                 CategoryKey.CATEGORY_APPS);
-        PARENT_TO_CATEGORY_KEY_MAP.put(PowerUsageSummary.class.getName(),
+        PARENT_TO_CATEGORY_KEY_MAP.put(MoreBatterySettings.class.getName(),
                 CategoryKey.CATEGORY_BATTERY);
         PARENT_TO_CATEGORY_KEY_MAP.put(DisplaySettings.class.getName(),
                 CategoryKey.CATEGORY_DISPLAY);

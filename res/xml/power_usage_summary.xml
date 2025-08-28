@@ -81,6 +81,11 @@
         android:fragment="com.android.settings.lineage.health.ChargingControlSettings"
         settings:controller="com.android.settings.lineage.health.ChargingControlPreferenceController" />
 
+    <Preference
+       	android:key="more_battery"
+        android:title="@string/more_preference_title"
+        android:fragment="com.android.settings.fuelgauge.MoreBatterySettings"/>
+
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
         android:title="@string/battery_footer_summary"

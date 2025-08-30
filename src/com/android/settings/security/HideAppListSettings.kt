@@ -55,6 +55,39 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
     private var showOverlay = false
     private var optionsMenu: Menu? = null
 
+    enum class Action {
+        ADD,
+        REMOVE,
+        SET,
+    }
+
+    @Synchronized
+    fun putAppsForUser(packageName: String, userId: Int, action: Action) {
+        if (userId < 0) {
+            return
+        }
+
+        val cr = requireContext().contentResolver
+
+        val apps =
+            Settings.Secure.getString(cr, Settings.Secure.HIDE_APPLIST)
+                .split(",")
+                .toMutableSet()
+
+        when (action) {
+            Action.ADD -> apps.add(packageName)
+            Action.REMOVE -> apps.remove(packageName)
+            Action.SET -> {} // Don't change
+        }
+
+        Settings.Secure.putStringForUser(
+            cr,
+            Settings.Secure.HIDE_APPLIST,
+            apps.joinToString(separator = ","),
+            userId,
+        )
+    }
+
     override fun onStart() {
         super.onStart()
         updateOptionsMenu()
@@ -77,7 +110,7 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
         userManager = UserManager.get(requireContext())
         userInfos = userManager.getUsers()
         for (info in userInfos) {
-            hideAppListUtils.setApps(requireContext(), info.id)
+            putAppsForUser("", info.id, Action.SET)
         }
     }
 
@@ -200,9 +233,9 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
         if (packageName.isBlank()) return
         for (info in userInfos) {
             if (isChecked) {
-                hideAppListUtils.addApp(requireContext(), packageName, info.id)
+                putAppsForUser(packageName, info.id, Action.ADD)
             } else {
-                hideAppListUtils.removeApp(requireContext(), packageName, info.id)
+                putAppsForUser(packageName, info.id, Action.REMOVE)
             }
         }
         try {

@@ -321,4 +321,7 @@
     <string name="pif_data_title">Select device spoof preset</string>
     <string name="pif_data_summary">Select device spoof preset file to override device properties in applications</string>
   
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+
 </resources>

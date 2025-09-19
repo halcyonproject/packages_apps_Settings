@@ -113,6 +113,12 @@
             android:fragment="com.android.settings.communal.WidgetsOnLockscreenFragment"
             settings:controller="com.android.settings.display.WidgetsOnLockscreenPreferenceController"/>
 
+        <Preference
+            android:key="notch_enabled_apps"
+            android:title="@string/app_display_cutout_title"
+            android:summary="@string/app_display_cutout_summary"
+            settings:controller="com.android.settings.display.NotchAppsPreferenceController" />
+
         <com.android.settings.display.DensityPreference
             android:key="density"
             android:title="@string/developer_smallest_width" />

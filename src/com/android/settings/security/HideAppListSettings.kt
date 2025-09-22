@@ -32,7 +32,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.android.internal.util.halcyon.HideAppListUtils
 import com.google.android.material.appbar.AppBarLayout
 import com.android.settings.R
 
@@ -50,7 +49,6 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
     private var searchText = ""
     private var customFilter: ((PackageInfo) -> Boolean)? = null
     private var comparator: ((PackageInfo, PackageInfo) -> Int)? = null
-    private var hideAppListUtils: HideAppListUtils = HideAppListUtils()
     private var showSystem = false
     private var showOverlay = false
     private var optionsMenu: Menu? = null
@@ -70,9 +68,7 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
         val cr = requireContext().contentResolver
 
         val apps =
-            Settings.Secure.getString(cr, Settings.Secure.HIDE_APPLIST)
-                .split(",")
-                .toMutableSet()
+            Settings.Secure.getString(cr, Settings.Secure.HIDE_APPLIST).split(",").toMutableSet()
 
         when (action) {
             Action.ADD -> apps.add(packageName)

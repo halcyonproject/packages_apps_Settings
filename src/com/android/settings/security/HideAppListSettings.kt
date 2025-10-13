@@ -68,7 +68,9 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
         val cr = requireContext().contentResolver
 
         val apps =
-            Settings.Secure.getString(cr, Settings.Secure.HIDE_APPLIST).split(",").toMutableSet()
+            Settings.Secure.getString(cr, getKey())
+                ?.split(",")
+                ?.toMutableSet() ?: mutableSetOf<String>()
 
         when (action) {
             Action.ADD -> apps.add(packageName)
@@ -78,7 +80,7 @@ class HideAppListSettings : Fragment(R.layout.hide_applist_layout) {
 
         Settings.Secure.putStringForUser(
             cr,
-            Settings.Secure.HIDE_APPLIST,
+            getKey(),
             apps.joinToString(separator = ","),
             userId,
         )

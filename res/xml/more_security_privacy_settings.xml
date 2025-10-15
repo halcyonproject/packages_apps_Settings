@@ -188,6 +188,12 @@
             <intent android:action="com.android.devicelockcontroller.action.DEVICE_INFO_SETTINGS"
                     android:targetPackage="@string/config_device_lock_controller_package_name"/>
         </Preference>
+
+        <Preference
+            android:key="device_spoofing"
+            android:title="@string/device_spoof_title"
+            android:summary="@string/device_spoof_summary"
+            android:fragment="com.android.settings.halcyon.security.DeviceSpoofFragment"/>
     </PreferenceCategory>
 
     <Preference

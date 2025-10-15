@@ -278,4 +278,10 @@
     <string name="global_actions_advanced_reboot_title">Advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
 
+    <!-- Device spoofing -->
+    <string name="device_spoof_title">Device spoofing</string>
+    <string name="device_spoof_summary">Override device properties and attestation keys for system-wide spoofing.</string>
+    <string name="keybox_data_title">Select keybox</string>
+    <string name="keybox_data_summary">Select a keybox file to spoof key attestation</string>
+
 </resources>

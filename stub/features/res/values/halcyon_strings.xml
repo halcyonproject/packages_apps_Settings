@@ -313,4 +313,10 @@
     <string name="app_list_search_apps">Search apps</string>
     <string name="app_list_loading">Loading apps\u2026</string>
 
+    <!-- Device spoofing -->
+    <string name="device_spoof_title">Device spoofing</string>
+    <string name="device_spoof_summary">Override device properties and attestation keys for system-wide spoofing.</string>
+    <string name="keybox_data_title">Select keybox</string>
+    <string name="keybox_data_summary">Select a keybox file to spoof key attestation</string>
+
 </resources>

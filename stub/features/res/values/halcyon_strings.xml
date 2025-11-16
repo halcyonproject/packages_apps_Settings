@@ -240,18 +240,7 @@
     <!-- Quick Settings preference -->
     <string name="quicksettings_preferences_title">Quick Settings</string>
     <string name="quicksettings_preferences_summary">Adjust Quick Settings appearance and options</string>
-    <string name="quicksettings_brightness_slider_category">Brightness Slider</string>
     <string name="quicksettings_experimental_category">Experimental Features</string>
-
-    <!-- QS Panel brightness slider -->
-    <string name="qs_show_brightness_title">Show brightness slider in</string>
-    <string name="qs_show_brightness_summary">Tap to change</string>
-    <string name="qs_show_brightness_hide">Do not show</string>
-    <string name="qs_show_brightness_normal">Quick Settings panel</string>
-    <string name="qs_show_brightness_both">Quick &amp; Compact Quick Settings</string>
-
-    <string name="qs_brightness_position_position_title">Move to Bottom</string>
-    <string name="qs_brightness_position_position_summary">Display the brightness slider at the bottom of the Quick Settings panel</string>
 
     <!-- Battery styles ettings -->
     <string name="settings_battery_style_title">Battery styles</string>

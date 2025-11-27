@@ -23,15 +23,16 @@ import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.R;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.settingslib.core.AbstractPreferenceController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuickSettingsPreferences extends DashboardFragment {
-
-    private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity();
     }
 
     @Override
@@ -47,5 +48,12 @@ public class QuickSettingsPreferences extends DashboardFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.HALCYON;
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new DisableWindowBlursPreferenceController(context));
+        return controllers;
     }
 }

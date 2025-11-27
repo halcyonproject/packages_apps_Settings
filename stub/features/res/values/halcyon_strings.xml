@@ -21,6 +21,7 @@
      <!-- Preference caregories -->
      <string name="enable_window_blurs_title">Blur Effects</string>
      <string name="enable_window_blurs_summary">Displays blur behind certain system interface elements</string>
+     <string name="enable_window_blurs_unsupported_summary">This device does not support blur</string>
 
      <!-- Black theme for dark mode -->
      <string name="berry_black_theme_title">Pure black</string>

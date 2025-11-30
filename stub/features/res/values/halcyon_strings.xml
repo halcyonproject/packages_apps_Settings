@@ -276,6 +276,11 @@
     <string name="pif_data_title">Select device spoof preset</string>
     <string name="pif_data_summary">Select device spoof preset file to override device properties in applications</string>
   
+      <!-- User selectable app spoofing -->
+    <string name="user_selectable_app_spoofing_title">Select apps to spoof</string>
+    <string name="user_selectable_app_spoofing_summary">Choose which apps to spoof</string>
+    <string name="user_select_spoofing_profile_title">Select spoofing profile</string>
+ 
     <!-- Notch Apps Settings -->
     <string name="app_display_cutout_title">Fullscreen Apps</string>
     <string name="app_display_cutout_summary">Choose which apps can extend into the notch area</string>

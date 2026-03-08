@@ -742,7 +742,7 @@ public class FingerprintSettings extends SubSettings {
                         R.string.security_fingerprint_disclaimer_lockscreen_disabled_2
                 );
                 if (helpIntent != null) {
-                    if (!isUdfps() && isScreenOffUnlcokSupported()) {
+                    if (!isUdfps() && isScreenOffUnlockSupported()) {
                         column2.mLearnMoreOverrideText = getText(
                                 R.string.security_settings_fingerprint_settings_footer_learn_more);
                     }
@@ -793,7 +793,7 @@ public class FingerprintSettings extends SubSettings {
             return false;
         }
 
-        private boolean isScreenOffUnlcokSupported() {
+        private boolean isScreenOffUnlockSupported() {
             if (isUdfps()) {
                 return getContext().getResources().getBoolean(
                         com.android.internal.R.bool.config_screen_off_udfps_enabled);
@@ -846,7 +846,7 @@ public class FingerprintSettings extends SubSettings {
             // This needs to be after setting ids, otherwise
             // |mRequireScreenOnToAuthPreferenceController.isChecked| is always checking the primary
             // user instead of the user with |mUserId|.
-            if ((isScreenOffUnlcokSupported())
+            if ((isScreenOffUnlockSupported())
                     || getExtPreferenceProvider(requireContext()).getSize() > 0) {
                 addFingerprintUnlockCategory();
             }
@@ -955,9 +955,9 @@ public class FingerprintSettings extends SubSettings {
                         this::fingerprintUnlockCategoryHasVisibleChild);
             }
 
-            if (!isUdfps() && isScreenOffUnlcokSupported()) {
+            if (!isUdfps() && isScreenOffUnlockSupported()) {
                 setupFingerprintUnlockCategoryPreferencesForScreenOnToAuth();
-            } else if (isUdfps() && isScreenOffUnlcokSupported()) {
+            } else if (isUdfps() && isScreenOffUnlockSupported()) {
                 setupFingerprintUnlockCategoryPreferencesForScreenOffUnlock();
             }
             setupExtFingerprintPreferences();
@@ -1080,7 +1080,7 @@ public class FingerprintSettings extends SubSettings {
         private void updatePreferencesAfterFingerprintRemoved() {
             updateAddPreference();
             updateUseFingerprintToEnableStatus();
-            if (isScreenOffUnlcokSupported()) {
+            if (isScreenOffUnlockSupported()) {
                 updateFingerprintUnlockCategoryVisibility();
             }
             updatePreferences();
@@ -1358,7 +1358,7 @@ public class FingerprintSettings extends SubSettings {
         private List<AbstractPreferenceController> buildPreferenceControllers(Context context) {
             final List<AbstractPreferenceController> controllers =
                     createThePreferenceControllers(context);
-            if (!isUdfps() && isScreenOffUnlcokSupported()) {
+            if (!isUdfps() && isScreenOffUnlockSupported()) {
                 for (AbstractPreferenceController controller : controllers) {
                     if (KEY_FINGERPRINT_UNLOCK_CATEGORY.equals(controller.getPreferenceKey())) {
                         mFingerprintUnlockCategoryPreferenceController =
@@ -1371,7 +1371,7 @@ public class FingerprintSettings extends SubSettings {
                     }
 
                 }
-            } else if (isScreenOffUnlcokSupported()) {
+            } else if (isScreenOffUnlockSupported()) {
                 for (AbstractPreferenceController controller : controllers) {
                     if (KEY_FINGERPRINT_UNLOCK_CATEGORY.equals(controller.getPreferenceKey())) {
                         mFingerprintUnlockCategoryPreferenceController =

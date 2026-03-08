@@ -955,9 +955,9 @@ public class FingerprintSettings extends SubSettings {
                         this::fingerprintUnlockCategoryHasVisibleChild);
             }
 
-            if (!isSfps() && isScreenOffUnlcokSupported()) {
+            if (!isUdfps() && isScreenOffUnlcokSupported()) {
                 setupFingerprintUnlockCategoryPreferencesForScreenOnToAuth();
-            } else if (isScreenOffUnlcokSupported()) {
+            } else if (isUdfps() && isScreenOffUnlcokSupported()) {
                 setupFingerprintUnlockCategoryPreferencesForScreenOffUnlock();
             }
             setupExtFingerprintPreferences();
@@ -1006,6 +1006,10 @@ public class FingerprintSettings extends SubSettings {
 
         private void setupFingerprintUnlockCategoryPreferencesForScreenOnToAuth() {
             mRequireScreenOnToAuthPreference = findPreference(KEY_REQUIRE_SCREEN_ON_TO_AUTH);
+            if (mRequireScreenOnToAuthPreference == null
+                    || mRequireScreenOnToAuthPreferenceController == null) {
+                return;
+            }
             mRequireScreenOnToAuthPreference.setChecked(
                     mRequireScreenOnToAuthPreferenceController.isChecked());
             mRequireScreenOnToAuthPreference.setOnPreferenceChangeListener(
@@ -1018,6 +1022,10 @@ public class FingerprintSettings extends SubSettings {
 
         private void setupFingerprintUnlockCategoryPreferencesForScreenOffUnlock() {
             mScreenOffUnlockUdfpsPreference = findPreference(KEY_SCREEN_OFF_FINGERPRINT_UNLOCK);
+            if (mScreenOffUnlockUdfpsPreference == null
+                    || mScreenOffUnlockUdfpsPreferenceController == null) {
+                return;
+            }
             mScreenOffUnlockUdfpsPreference.setChecked(
                     mScreenOffUnlockUdfpsPreferenceController.isChecked());
             mScreenOffUnlockUdfpsPreference.setOnPreferenceChangeListener(
@@ -1352,10 +1360,11 @@ public class FingerprintSettings extends SubSettings {
                     createThePreferenceControllers(context);
             if (!isUdfps() && isScreenOffUnlcokSupported()) {
                 for (AbstractPreferenceController controller : controllers) {
-                    if (controller.getPreferenceKey() == KEY_FINGERPRINT_UNLOCK_CATEGORY) {
+                    if (KEY_FINGERPRINT_UNLOCK_CATEGORY.equals(controller.getPreferenceKey())) {
                         mFingerprintUnlockCategoryPreferenceController =
                                 (FingerprintUnlockCategoryController) controller;
-                    } else if (controller.getPreferenceKey() == KEY_REQUIRE_SCREEN_ON_TO_AUTH) {
+                    } else if (KEY_REQUIRE_SCREEN_ON_TO_AUTH.equals(
+                            controller.getPreferenceKey())) {
                         mRequireScreenOnToAuthPreferenceController =
                                 (FingerprintSettingsRequireScreenOnToAuthPreferenceController)
                                         controller;
@@ -1364,10 +1373,11 @@ public class FingerprintSettings extends SubSettings {
                 }
             } else if (isScreenOffUnlcokSupported()) {
                 for (AbstractPreferenceController controller : controllers) {
-                    if (controller.getPreferenceKey() == KEY_FINGERPRINT_UNLOCK_CATEGORY) {
+                    if (KEY_FINGERPRINT_UNLOCK_CATEGORY.equals(controller.getPreferenceKey())) {
                         mFingerprintUnlockCategoryPreferenceController =
                                 (FingerprintUnlockCategoryController) controller;
-                    } else if (controller.getPreferenceKey() == KEY_SCREEN_OFF_FINGERPRINT_UNLOCK) {
+                    } else if (KEY_SCREEN_OFF_FINGERPRINT_UNLOCK.equals(
+                            controller.getPreferenceKey())) {
                         mScreenOffUnlockUdfpsPreferenceController =
                                 (FingerprintSettingsScreenOffUnlockUdfpsPreferenceController)
                                         controller;

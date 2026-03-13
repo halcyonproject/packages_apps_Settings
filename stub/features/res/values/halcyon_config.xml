@@ -29,6 +29,9 @@
     <!-- Show advanced refresh rate option -->
     <bool name="config_show_advanced_refresh_rate" translatable="false">true</bool>
 
+    <!-- Uses the legacy UDFPS enrollment UI with side text instead of a footer button. -->
+    <bool name="config_useLegacyUdfpsUi" translatable="false">false</bool>
+
     <!-- Show Now Playing -->
     <bool name="config_show_now_playing">false</bool>
 

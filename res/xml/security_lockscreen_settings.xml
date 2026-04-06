@@ -42,6 +42,20 @@
             settings:searchable="false"
             settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenBypassPreferenceController" />
 
+        <EditTextPreference
+            android:key="lockscreen_show_custom_carrier_text_sim1"
+            android:title="@string/custom_carrier_sim1_title"
+            android:summary="@string/custom_carrier_sim1_summary"
+            android:dialogTitle="@string/custom_carrier_sim1_dialog_title"
+            settings:controller="com.android.settings.display.CustomCarrierPreferenceController" />
+
+        <EditTextPreference
+            android:key="lockscreen_show_custom_carrier_text_sim2"
+            android:title="@string/custom_carrier_sim2_title"
+            android:summary="@string/custom_carrier_sim2_summary"
+            android:dialogTitle="@string/custom_carrier_sim2_dialog_title"
+            settings:controller="com.android.settings.display.CustomCarrierPreferenceController" />
+
         <com.android.settingslib.RestrictedSwitchPreference
             android:key="security_lockscreen_add_users_when_locked"
             android:title="@string/user_add_on_lockscreen_menu"

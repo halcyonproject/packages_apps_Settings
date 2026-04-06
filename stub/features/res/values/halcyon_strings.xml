@@ -443,4 +443,12 @@
     <!-- Running services - Background processes tab -->
     <string name="background_processes_settings_title">Background processes</string>
 
+    <!-- Running services - Background processes tab -->
+    <string name="custom_carrier_sim1_title">Custom carrier string (SIM 1)</string>
+    <string name="custom_carrier_sim1_summary">Set a custom carrier text for SIM 1</string>
+    <string name="custom_carrier_sim1_dialog_title">Enter custom carrier text for SIM 1</string>
+
+    <string name="custom_carrier_sim2_title">Custom carrier string (SIM 2)</string>
+    <string name="custom_carrier_sim2_summary">Set a custom carrier text for SIM 2</string>
+    <string name="custom_carrier_sim2_dialog_title">Enter custom carrier text for SIM 2</string>
 </resources>

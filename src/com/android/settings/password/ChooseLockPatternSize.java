@@ -109,16 +109,21 @@ public class ChooseLockPatternSize extends SettingsActivity {
         @Override
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            GlifPreferenceLayout layout = (GlifPreferenceLayout) view;
-            layout.setDividerItemDecoration(new SettingsDividerItemDecoration(getContext()));
+            if (view instanceof GlifPreferenceLayout) {
+                GlifPreferenceLayout layout = (GlifPreferenceLayout) view;
+                layout.setDividerItemDecoration(new SettingsDividerItemDecoration(getContext()));
+                layout.setIcon(getContext().getDrawable(R.drawable.ic_lock));
 
-            layout.setIcon(getContext().getDrawable(R.drawable.ic_lock));
+                if (getActivity() != null) {
+                    getActivity().setTitle(R.string.lock_settings_picker_pattern_size_message);
+                }
 
-            if (getActivity() != null) {
-                getActivity().setTitle(R.string.lock_settings_picker_pattern_size_message);
+                layout.setHeaderText(R.string.lock_settings_picker_pattern_size_message);
+            } else {
+                if (getActivity() != null) {
+                    getActivity().setTitle(R.string.lock_settings_picker_pattern_size_message);
+                }
             }
-
-            layout.setHeaderText(R.string.lock_settings_picker_pattern_size_message);
 
             // Use the dividers in SetupWizardRecyclerLayout. Suppress the dividers in
             // PreferenceFragment.
@@ -128,8 +133,11 @@ public class ChooseLockPatternSize extends SettingsActivity {
         @Override
         public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
                 Bundle savedInstanceState) {
-            GlifPreferenceLayout layout = (GlifPreferenceLayout) parent;
-            return layout.onCreateRecyclerView(inflater, parent, savedInstanceState);
+            if (parent instanceof GlifPreferenceLayout) {
+                GlifPreferenceLayout layout = (GlifPreferenceLayout) parent;
+                return layout.onCreateRecyclerView(inflater, parent, savedInstanceState);
+            }
+            return super.onCreateRecyclerView(inflater, parent, savedInstanceState);
         }
 
         @Override

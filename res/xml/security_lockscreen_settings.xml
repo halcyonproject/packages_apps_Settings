@@ -56,6 +56,12 @@
             android:dialogTitle="@string/custom_carrier_sim2_dialog_title"
             settings:controller="com.android.settings.display.CustomCarrierPreferenceController" />
 
+        <com.android.settingslib.PrimarySwitchPreference
+            android:key="widgets_on_lockscreen"
+            android:title="@string/widgets_on_lockscreen_title"
+            android:fragment="com.android.settings.communal.WidgetsOnLockscreenFragment"
+            settings:controller="com.android.settings.display.WidgetsOnLockscreenPreferenceController"/>
+
         <com.android.settingslib.RestrictedSwitchPreference
             android:key="security_lockscreen_add_users_when_locked"
             android:title="@string/user_add_on_lockscreen_menu"

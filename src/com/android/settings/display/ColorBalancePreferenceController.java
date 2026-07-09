@@ -38,8 +38,7 @@ public class ColorBalancePreferenceController extends SliderPreferenceController
 
     @Override
     public int getAvailabilityStatus() {
-        return ColorDisplayManager.isColorTransformAccelerated(mContext) ?
-                AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return AVAILABLE;
     }
 
     @Override

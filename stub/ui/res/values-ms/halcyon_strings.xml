@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2023 Halcyon Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Google stuoid fucking IA -->
+    <string name="gms_enabled_title">Perkhidmatan Google</string>
+    <string name="wellbeing_title">Kesejahteraan digital</string>
+
+    <string name="keywords_top_level_device_info">perihal telefon, halcyon, nama peranti, nama telefon, tentang telefon</string>
+
+    <!-- About Phone Header -->
+    <string name="halcyon_device_title">Peranti</string>
+    <string name="halcyon_memory_storage_title">Memori &amp; Storan</string>
+    <string name="halcyon_screen_res_title">Paparan</string>
+    <string name="about_device_title">Perihal peranti</string>
+    <string name="about_tablet_title">Perihal tablet</string>
+    <string name="about_phone_title">Perihal telefon</string>
+
+    <!-- About Phone footer -->
+    <string name="halcyon_release_type_message">Peranti ini menjalankan binaan Halcyon %1$s. Pepijat mungkin berlaku.</string>
+    <string name="halcyon_release_type_innerbloom_message">Anda menggunakan binaan Innerbloom. Terima kasih kerana menyokong Halcyon!</string>
+
+    <!-- Innerbloom fragment -->
+    <string name="innerbloom_fragment_label">Innerbloom</string>
+    <string name="innerbloom_fragment_headline">Binaan ini dicipta khas untuk %1$s.</string>
+    <string name="innerbloom_fragment_user_fallback">anda</string>
+    <string name="innerbloom_fragment_subtitle">Terima kasih kerana menyokong Halcyon dan membantu mengekalkan projek ini melalui program Innerbloom!</string>
+
+    <!-- Quick Settings preference -->
+    <string name="quicksettings_preferences_title">Panel Tetapan Pantas</string>
+    
+    <string name="qs_style_preference_title">Gaya Panel Tetapan Pantas</string>
+    <string name="qs_style_preference_summary">Pilih gaya visual untuk panel Tetapan Pantas anda</string>
+    <string name="qs_style_nestui_label">NestUI</string>
+    <string name="qs_style_stock_label">Stock</string>
+    <string name="qs_style_default_label">Lalai</string>
+    <string name="qs_preview_ssid_placeholder" translatable="false">Halcyon</string>
+    
+    <string name="quick_settings_internet_label">Internet</string>
+    <string name="quick_settings_bluetooth_label">Bluetooth</string>
+
+</resources>

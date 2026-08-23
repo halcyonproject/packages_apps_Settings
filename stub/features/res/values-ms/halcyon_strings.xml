@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2023 Halcyon Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Debugging dengan akses root</string>
+    <string name="adb_enable_summary_root">Benarkan menjalankan Debugging Android sebagai root</string>
+
+    <!-- Hotspot extras -->
+    <string name="tethering_allow_vpn_upstreams_title">Gunakan VPN untuk peranti yang disambungkan</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Apabila peranti ini menggunakan VPN, semua peranti yang disambungkan ke tempat liputan akan menggunakan VPN yang sama</string>
+
+    <!-- Location settings screen, setting check box label if Assisted GPS should be enabled -->
+    <string name="assisted_gps">Gunakan assisted GPS</string>
+    <!-- Location settings screen, setting summary for Assisted GPS switch -->
+    <string name="assisted_gps_summary">Muat turun data bantuan satelit daripada internet yang boleh meningkatkan prestasi permulaan GPS dengan ketara. Untuk panggilan kecemasan, assisted GPS sentiasa dibenarkan.</string>
+
+    <!-- Battery Info: Technology -->
+    <string name="battery_technology">Teknologi</string>
+
+    <!-- Battery Info: Health -->
+    <string name="battery_health">Kesihatan</string>
+    <string name="battery_health_good">Baik</string>
+    <string name="battery_health_overheat">Terlalu panas</string>
+    <string name="battery_health_dead">Mati</string>
+    <string name="battery_health_over_voltage">Voltan berlebihan</string>
+    <string name="battery_health_unspecified_failure">Kegagalan tidak ditentukan</string>
+    <string name="battery_health_cold">Sejuk</string>
+    <string name="battery_health_unknown">Tidak diketahui</string>
+
+    <!-- Battery Info: Temperature -->
+    <string name="battery_temperature">Suhu</string>
+
+    <!-- Battery Info: Voltage -->
+    <string name="battery_voltage">Voltan</string>
+
+    <!-- Battery Info: Charge Counter -->
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+
+    <!-- Battery Info: Design Capacity -->
+    <string name="battery_design_capacity">Kapasiti reka bentuk</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+
+    <!-- Battery Info: Maximum Capacity -->
+    <string name="battery_maximum_capacity">Kapasiti maksimum</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
+
+    <!-- Warning message for the sd card setup -->
+    <string name="storage_warning_internal">Amaran: Pilihan ini mungkin tidak berfungsi dengan betul atau menyebabkan kehilangan data, oleh itu ia tidak disyorkan!</string>
+
+    <!-- Advanced keyboard settings -->
+    <string name="keyboard_extras_title">Tambahan</string>
+    <string name="advanced_keyboard_settings_title">Tetapan lanjutan</string>
+
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <string name="show_dev_countdown_cm">{count, plural,
+      =1      {Anda kini # langkah lagi untuk mendayakan pilihan pembangun.}
+      other   {Anda kini # langkah lagi untuk mendayakan pilihan pembangun.}
+    }</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_cm">Anda telah mendayakan pilihan pembangun!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_cm">Tidak perlu, anda sudah mendayakan pilihan pembangun.</string>
+
+    <!-- Copy to clipboard -->
+    <string name="copied_to_clipboard">Disalin ke papan keratan</string>
+    <string name="longpress_to_clipboard">Tekan lama untuk menyalin</string>
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Maklumat radio</string>
+
+    <!-- Heads-up -->
+    <string name="heads_up_notifications_enabled_title">Heads-up</string>
+    <string name="heads_up_notifications_enabled_summary">Paparkan pemberitahuan keutamaan dalam tetingkap terapung kecil</string>
+
+    <!-- Black theme for dark mode -->
+    <string name="berry_black_theme_title">Hitam pekat</string>
+    <string name="berry_black_theme_summary">Latar belakang hitam pekat untuk tema gelap</string>
+
+    <!-- LiveDisplay -->
+    <string name="live_display_summary">Optimumkan skrin anda berdasarkan masa dan keadaan persekitaran untuk meningkatkan kebolehbacaan dan mengurangkan keletihan mata</string>
+    <string name="live_display_mode">Mod paparan</string>
+    <string name="live_display_color_temperature_title">Suhu warna</string>
+    <string name="live_display_color_temperature_summary">Siang: <xliff:g id="day_temperature">%1$d</xliff:g>K  Malam: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
+    <string name="live_display_color_temperature_label"><xliff:g id="degrees">%1$d</xliff:g>K</string>
+    <string name="live_display_day">Siang</string>
+    <string name="live_display_night">Malam</string>
+    <string name="live_display_outdoor_mode_title">Mod luar bangunan automatik</string>
+    <string name="live_display_outdoor_mode_summary">Tingkatkan kecerahan dan ketepuan secara automatik di bawah cahaya matahari yang terang</string>
+    <string name="live_display_anti_flicker_title">Antikelipan</string>
+    <string name="live_display_anti_flicker_summary">Cegah kelipan berlebihan dan kurangkan keletihan mata dalam keadaan cahaya malap. Ciri ini mungkin mengurangkan ketepatan warna dan menjejaskan cara beberapa item dipaparkan.</string>
+    <string name="live_display_low_power_title">Kurangkan penggunaan kuasa</string>
+    <string name="live_display_low_power_summary">Laraskan paparan untuk penggunaan kuasa paling rendah tanpa penurunan kualiti</string>
+    <string name="live_display_enhance_color_title">Tingkatkan warna</string>
+    <string name="live_display_enhance_color_summary">Tingkatkan keceriaan warna tona kulit, pemandangan dan imej lain</string>
+    <string name="live_display_color_profile_title">Profil warna</string>
+    <string name="live_display_color_profile_standard_title">Standard</string>
+    <string name="live_display_color_profile_standard_summary">Warna tepat dan putih cerah</string>
+    <string name="live_display_color_profile_natural_title">Semula jadi</string>
+    <string name="live_display_color_profile_natural_summary">Warna realistik dan tona kulit semula jadi</string>
+    <string name="live_display_color_profile_dynamic_title">Dinamik</string>
+    <string name="live_display_color_profile_dynamic_summary">Warna dipertingkatkan dan putih cerah</string>
+    <string name="live_display_color_profile_cinema_title">Pawagam</string>
+    <string name="live_display_color_profile_cinema_summary">Pembiakan warna sempurna untuk video</string>
+    <string name="live_display_color_profile_astronomy_title">Astronomi</string>
+    <string name="live_display_color_profile_astronomy_summary">Merah pekat untuk mengekalkan penglihatan malam</string>
+    <string name="live_display_color_profile_photography_title">Fotografi</string>
+    <string name="live_display_color_profile_photography_summary">Pembiakan warna sempurna untuk foto</string>
+    <string name="live_display_color_profile_basic_title">Asas</string>
+    <string name="live_display_color_profile_basic_summary">Gunakan paparan tanpa ditentukur</string>
+    <string name="live_display_color_profile_adaptive_title">Adaptif</string>
+    <string name="live_display_color_profile_adaptive_summary">Warna menyesuaikan mengikut keadaan persekitaran</string>
+    <string name="live_display_color_profile_reading_title">Membaca</string>
+    <string name="live_display_color_profile_reading_summary">Warna lebih hangat untuk mengurangkan keletihan mata</string>
+    <string name="live_display_color_profile_srgb_title">sRGB</string>
+    <string name="live_display_color_profile_srgb_summary">Warna tepat mengikut ruang warna sRGB</string>
+    <string name="live_display_color_profile_dci_p3_title">DCI-P3</string>
+    <string name="live_display_color_profile_dci_p3_summary">Warna tepat mengikut ruang warna DCI-P3</string>
+    <string name="live_display_reading_mode_title">Mod membaca</string>
+    <string name="live_display_reading_mode_summary">Mod skala kelabu untuk pembacaan jangka panjang</string>
+    <string name="color_calibration_title">Penentukuran warna</string>
+    <string name="color_calibration_summary">Tentukur warna pada skrin</string>
+    <string name="color_red_title">Merah</string>
+    <string name="color_green_title">Hijau</string>
+    <string name="color_blue_title">Biru</string>
+
+    <!-- LiveDisplay : Picture Adjustment -->
+    <string name="picture_adjustment_title">Pelarasan gambar</string>
+    <string name="picture_adjustment_summary">Laraskan rona, ketepuan, keamatan dan kontras</string>
+    <string name="adj_hue_title">Rona</string>
+    <string name="adj_saturation_title">Ketepuan</string>
+    <string name="adj_intensity_title">Keamatan</string>
+    <string name="adj_contrast_title">Kontras</string>
+
+    <!-- Touchscreen hovering -->
+    <string name="touchscreen_hovering_title">Apungan skrin sentuh</string>
+    <string name="touchscreen_hovering_summary">Membolehkan anda mengapungkan kursor pada skrin seperti tetikus dalam penyemak imbas web, desktop jauh, dll.</string>
+
+    <!-- High touch sensitivity -->
+    <string name="high_touch_sensitivity_title">Kepekaan sentuhan tinggi</string>
+    <string name="high_touch_sensitivity_summary">Tingkatkan kepekaan skrin sentuh supaya boleh digunakan semasa memakai sarung tangan</string>
+
+    <!-- High touch polling rate -->
+    <string name="high_touch_polling_rate_title">Kadar pengundian sentuhan tinggi</string>
+    <string name="high_touch_polling_rate_summary">Tingkatkan kadar pengundian skrin sentuh</string>
+
+    <!-- Charging control settings -->
+    <string name="charging_control_title">Kawalan pengecasan</string>
+    <string name="charging_control_summary">Sesuaikan jadual pengecasan dan had untuk bateri</string>
+    <string name="charging_control_enable_title">Dayakan kawalan pengecasan</string>
+    <string name="charging_control_mode_title">Mod pengecasan</string>
+    <string name="charging_control_mode_auto_title">Jadual automatik</string>
+    <string name="charging_control_mode_auto_summary">Tentukan bila hendak mula mengecas secara automatik berdasarkan penggera yang ditetapkan</string>
+    <string name="charging_control_mode_custom_title">Jadual tersuai</string>
+    <string name="charging_control_mode_custom_summary">Tetapkan masa sasaran untuk cas penuh</string>
+    <string name="charging_control_mode_limit_title">Hadkan pengecasan</string>
+    <string name="charging_control_mode_limit_summary">Hadkan pengecasan kepada peratusan tertentu</string>
+    <string name="charging_control_start_time_title">Masa mula</string>
+    <string name="charging_control_start_time_summary">Kawalan pengecasan diaktifkan apabila anda mula mengecas selepas %s</string>
+    <string name="charging_control_target_time_title">Masa sasaran untuk cas penuh</string>
+    <string name="charging_control_target_time_summary">Bateri akan dicas sepenuhnya menjelang %s</string>
+    <string name="charging_control_limit_title">Had</string>
+    <string name="charging_control_limit_summary">Had semasa: %d%%</string>
+    <string name="reset">Tetapkan semula</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">Cari penderia cap jari pada bahagian hadapan tablet anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="device">Cari penderia cap jari pada bahagian hadapan peranti anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">Cari penderia cap jari pada bahagian hadapan telefon anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">Cari penderia cap jari pada bahagian belakang tablet anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="device">Cari penderia cap jari pada bahagian belakang peranti anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">Cari penderia cap jari pada bahagian belakang telefon anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">Cari penderia cap jari pada bahagian sisi tablet anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="device">Cari penderia cap jari pada bahagian sisi peranti anda.</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">Cari penderia cap jari pada bahagian sisi telefon anda.</string>
+
+    <!-- Message shown when user touches the icon on the screen, instead of the real fingerprint sensor -->
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">Sentuh penderia pada bahagian hadapan tablet anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="device">Sentuh penderia pada bahagian hadapan peranti anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">Sentuh penderia pada bahagian hadapan telefon anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">Sentuh penderia pada bahagian belakang tablet anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">Sentuh penderia pada bahagian belakang peranti anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">Sentuh penderia pada bahagian belakang telefon anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">Sentuh penderia pada bahagian sisi tablet anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="device">Sentuh penderia pada bahagian sisi peranti anda.</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">Sentuh penderia pada bahagian sisi telefon anda.</string>
+
+    <!-- Lock screen pattern size -->
+    <string name="lock_settings_picker_pattern_size_message">Pilih saiz corak</string>
+
+    <!-- Whether a visible red line will be drawn after the user has drawn the unlock pattern incorrectly -->
+    <string name="lockpattern_settings_enable_error_path_title">Tunjukkan ralat corak</string>
+    <!-- Whether the dots will be drawn when using the lockscreen pattern -->
+    <string name="lockpattern_settings_enable_dots_title">Tunjukkan titik corak</string>
+
+    <!-- Display : Rotation -->
+    <string name="display_rotation_title">Tetapan putaran</string>
+    <string name="display_rotation_enabled">Putaran automatik didayakan</string>
+    <string name="display_rotation_disabled">Putaran automatik dinyahdayakan</string>
+    <string name="display_rotation_unit">darjah</string>
+    <string name="display_rotation_category_title">Mod putaran</string>
+    <string name="display_rotation_0_title">0 darjah</string>
+    <string name="display_rotation_90_title">90 darjah</string>
+    <string name="display_rotation_180_title">180 darjah</string>
+    <string name="display_rotation_270_title">270 darjah</string>
+
+    <!-- One shot automatic brightness -->
+    <string name="auto_brightness_one_shot_title">Kecerahan automatik sekali</string>
+    <string name="auto_brightness_one_shot_summary">Pelarasan kecerahan hanya akan berlaku pada masa skrin dihidupkan</string>
+
+    <!-- PIN scramble -->
+    <string name="unlock_scramble_pin_layout_title">Rawakkan susun atur</string>
+    <string name="unlock_scramble_pin_layout_summary">Rawakkan susun atur PIN semasa membuka kunci peranti</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">5G Pintar</string>
+    <string name="smart_5g_summary">Beralih secara automatik antara 5G dan 4G untuk mengurangkan penggunaan bateri</string>
+
+    <!-- Power menu on secure lockscreen -->
+    <string name="lockscreen_enable_power_menu_title">Menu kuasa</string>
+    <string name="lockscreen_enable_power_menu_summary">Benarkan akses menu kuasa pada skrin kunci selamat</string>
+
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Kawalan main balik</string>
+    <string name="volume_button_music_control_summary">Apabila skrin dimatikan, tekan lama kekunci kelantangan untuk melangkau trek muzik</string>
+
+    <!-- Cycle through ringer modes gesture -->
+    <string name="prevent_ringing_option_cycle">Kitar melalui mod</string>
+    <string name="prevent_ringing_option_cycle_summary">Hidup (kitar melalui mod)</string>
+
+    <!-- Wake on plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Bangunkan semasa dipalamkan</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Hidupkan skrin apabila menyambung atau memutuskan sambungan sumber kuasa</string>
+
+    <!-- Ignore window secure -->
+    <string name="ignore_window_secure_title">Abaikan bendera keselamatan tetingkap</string>
+    <string name="ignore_window_secure_summary">Alih keluar had tangkapan skrin dan rakaman skrin untuk semua apl. Ini mungkin memudahkan dalam sesetengah kes tetapi boleh menyebabkan kebocoran privasi.</string>
+
+    <!-- Ambient wake toggles -->
+    <string name="doze_gesture_ambient_title">Tunjukkan Ambien</string>
+    <string name="doze_gesture_ambient_summary">Tunjukkan Paparan Ambien dan bukannya membangunkan skrin sepenuhnya</string>
+    <string name="gesture_wake_ambient">Tunjukkan Ambien</string>
+    <string name="gesture_wake">Bangunkan sepenuhnya</string>
+
+    <!-- Doze enablement -->
+    <string name="doze_enabled_title">Paparan ambien</string>
+    <string name="doze_enabled_summary">Mendayakan fungsi pakej doze</string>
+
+    <!-- Double tap to sleep on status bar or lockscreen -->
+    <string name="status_bar_double_tap_to_sleep_title">Ketik untuk tidur</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Dwiketik pada bar status atau skrin kunci untuk mematikan paparan</string>
+
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">Kadar penyegaran</string>
+    <string name="refresh_rate_summary_vrr_off">%d Hz</string>
+    <string name="refresh_rate_summary_vrr_on">%d Hz (Adaptif)</string>
+    <string name="refresh_rate_vrr_title">Kadar penyegaran adaptif</string>
+    <string name="refresh_rate_vrr_summary">Kurangkan kadar penyegaran secara automatik apabila paparan melahu untuk menjimatkan kuasa. Boleh menyebabkan kelipan atau perubahan warna pada paparan tertentu</string>
+    <string name="refresh_rate_footer">Kadar penyegaran yang lebih tinggi menjadikan paparan lebih lancar, tetapi meningkatkan penggunaan kuasa</string>
+    <string name="keywords_refresh_rate">kadar penyegaran, refresh rate, lancar, puncak, 60hz, 90hz, 120hz, 144hz, 165hz</string>
+
+    <!-- Battery saver refresh rate -->
+    <string name="battery_saver_refresh_rate_title">Kurangkan kadar penyegaran</string>
+    <string name="battery_saver_refresh_rate_summary">Gunakan kadar penyegaran skrin 60 Hz untuk menjimatkan kuasa apabila Penjimat Bateri dihidupkan</string>
+
+    <!-- Preference and settings suggestion title text for screen off UDFPS [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title">Cap Jari Sentiasa Hidup</string>
+    <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
+    <string name="ambient_display_screen_off_udfps_summary">Membenarkan membuka kunci semasa skrin dimatikan.
+Mendayakan ini mungkin menyebabkan peranti terjaga secara tidak sengaja.</string>
+
+    <!-- Hotspot -->
+    <string name="wifi_hotspot_hidden_ssid_title">Rangkaian tersembunyi</string>
+    <string name="wifi_hotspot_hidden_ssid_summary">Nama tempat liputan mudah alih anda tidak akan muncul dalam senarai rangkaian WLAN yang tersedia.</string>
+    <string name="wifi_hotspot_client_manager_title">Peranti disambungkan</string>
+    <string name="wifi_hotspot_client_manager_summary">Senaraikan dan uruskan peranti yang disambungkan ke tempat liputan</string>
+    <string name="wifi_hotspot_client_manager_list_only_summary">Senarai peranti yang disambungkan ke tempat liputan</string>
+    <string name="wifi_hotspot_client_limit_title">Had peranti disambungkan</string>
+    <string name="wifi_hotspot_blocked_clients_list_title">Peranti Disekat</string>
+    <string name="wifi_hotspot_connected_clients_list_title">Peranti Disambungkan</string>
+    <string name="wifi_hotspot_block_client_dialog_title">Sekat peranti</string>
+    <string name="wifi_hotspot_block_client_dialog_text">Tindakan ini akan memutuskan sambungan "<xliff:g id="device_name">%1$s</xliff:g>" daripada peranti ini dan menambahkannya ke senarai sekatan</string>
+    <string name="wifi_hotspot_unblock_client_dialog_title">Nyahsekat peranti</string>
+    <string name="wifi_hotspot_unblock_client_dialog_text">Peranti "<xliff:g id="device_name">%1$s</xliff:g>" akan dapat menyambung ke tempat liputan ini</string>
+    <string name="wifi_hotspot_client_manager_footer_text">Tiada klien tersedia buat masa ini. Peranti yang disambungkan dan disekat akan disenaraikan di sini apabila tersedia.</string>
+
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Pengurus ikon</string>
+    <string name="icon_manager_summary">Kawal keterlihatan ikon bar status</string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Apl skrin penuh</string>
+    <string name="display_cutout_force_fullscreen_summary">Paksa apl mengabaikan ruang takuk</string>
+    <string name="app_list_search">Cari</string>
+    <string name="app_list_search_apps">Cari apl</string>
+    <string name="app_list_loading">Memuatkan apl…</string>
+
+    <!-- Device spoofing -->
+    <string name="device_spoof_title">Penyamaran peranti</string>
+    <string name="halcyon_pih_enabled_title">Dayakan penyamaran peranti</string>
+    <string name="device_spoof_summary">Gantikan sifat peranti dan kunci perakuan untuk penyamaran seluruh sistem.</string>
+    <string name="keybox_data_title">Pilih keybox</string>
+    <string name="keybox_data_summary">Pilih fail keybox untuk menyamarkan perakuan kunci</string>
+    <string name="pif_data_title">Pilih pratetap penyamaran peranti</string>
+    <string name="pif_data_summary">Pilih fail pratetap penyamaran peranti untuk menggantikan sifat peranti dalam aplikasi</string>
+  
+    <!-- User selectable app spoofing -->
+    <string name="user_selectable_app_spoofing_title">Pilih apl untuk disamarkan</string>
+    <string name="user_selectable_app_spoofing_summary">Pilih apl yang hendak disamarkan</string>
+    <string name="user_select_spoofing_profile_title">Pilih profil penyamaran</string>
+ 
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Bunyi tangkapan skrin</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Dayakan mula semula lanjutan</string>
+    <string name="global_actions_advanced_reboot_summary">Tunjukkan pilihan untuk pemulihan (recovery) dan pemuat but dalam menu kuasa</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Leret untuk tangkapan skrin</string>
+    <string name="three_finger_gesture_summary">Leret ke bawah dengan tiga jari untuk mengambil tangkapan skrin</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_state_title">Penunjuk trafik rangkaian</string>
+    <string name="network_traffic_state_summary">Dayakan atau nyahdayakan penunjuk kelajuan rangkaian dalam bar status</string>
+    <string name="network_traffic_title">Penunjuk trafik rangkaian</string>
+    <string name="network_traffic_master_switch_title">Gunakan Penunjuk Trafik Rangkaian</string>
+    <string name="network_options_title">Pilihan</string>
+    <string name="network_traffic_autohide_title">Sembunyikan penunjuk trafik rangkaian jika tidak aktif</string>
+    <string name="network_traffic_autohide_summary">Sembunyikan apabila penunjuk trafik rangkaian di bawah 1 KB/s</string>
+
+    <!-- Hide developer status -->
+    <string name="search">Cari</string>
+    <string name="search_apps">Cari apl</string>
+    <string name="hide_developer_status_title">Sembunyikan status pembangun</string>
+    <string name="hide_developer_status_summary">Sembunyikan status pembangun daripada apl</string>
+
+    <!-- Hide applist -->
+    <!-- [CHAR LIMIT=NONE] Menu for manage apps to control whether system processes are shown -->
+    <string name="menu_show_system">Tunjukkan sistem</string>
+    <string name="menu_show_overlay">Tunjukkan tindanan</string>
+    <!-- [CHAR LIMIT=NONE] Menu for manage apps to control whether system processes are hidden -->
+    <string name="menu_hide_system">Sembunyikan sistem</string>
+    <string name="menu_hide_overlay">Sembunyikan tindanan</string>
+    <string name="hide_applist_title">Sembunyikan senarai apl</string>
+    <string name="hide_applist_summary">Sembunyikan apl yang dipilih daripada apl lain</string>
+
+    <!-- Screen rotation suggestion button -->
+    <string name="show_rotation_suggestions_title">Dayakan butang cadangan putaran skrin</string>
+    <string name="show_rotation_suggestions_summary">Tunjukkan butang terapung untuk memutarkan skrin apabila peranti dicondongkan dan putaran automatik dinyahdayakan</string>
+
+    <!-- Summary of the lock screen auto pin confirm setting. -->
+    <string name="lock_screen_auto_pin_confirm_summary_custom">Buka kunci secara automatik jika anda memasukkan PIN yang betul.</string>
+
+    <!-- Override Mock Location restriction -->
+    <string name="override_mock_location_title">Gantikan sekatan Lokasi Olokan</string>
+    <string name="override_mock_location_summary">Apabila didayakan, apl tidak dapat mengesan lokasi olokan</string>
+
+    <!-- Pocket mode -->
+    <string name="proximity_wake_title">Cegah skrin terjaga secara tidak sengaja</string>
+    <string name="proximity_wake_summary">Periksa penderia kehampiran sebelum menghidupkan skrin</string>
+
+    <!-- Lockscreen battery info indicator -->
+    <string name="lockscreen_battery_info_title">Maklumat Pengecasan pada Skrin Kunci</string>
+    <string name="lockscreen_battery_info_summary">Tunjukkan arus, voltan, watt dan suhu semasa mengecas</string>
+
+    <!-- TTmeout -->
+    <string name="custom_timeout_summary_5secs">5 saat</string>
+    <string name="custom_timeout_summary_10secs">10 saat</string>
+    <string name="custom_timeout_summary_30secs">30 saat</string>
+    <string name="custom_timeout_summary_1min">1 minit</string>
+    <string name="custom_timeout_summary_5mins">5 minit</string>
+    <string name="custom_timeout_summary_10mins">10 minit</string>
+    <string name="custom_timeout_summary_30mins">30 minit</string>
+
+    <!-- App lock -->
+    <string name="app_lock_title">Kunci apl</string>
+    <plurals name="app_lock_summary">
+        <item quantity="one"><xliff:g example="1" id="Number of applications">%1$d</xliff:g> apl dilindungi</item>
+        <item quantity="other"><xliff:g example="10" id="Number of applications">%1$d</xliff:g> apl dilindungi</item>
+    </plurals>
+    <string name="app_lock_authentication_dialog_title">Buka kunci</string>
+    <string name="enable_debugging">Dayakan penyahpepijatan</string>
+    <string name="disable_debugging">Nyahdayakan penyahpepijatan</string>
+    <string name="app_lock_packages_title">Apl yang dilindungi</string>
+    <string name="app_lock_packages_summary">Pilih apl untuk dilindungi dengan biometrik atau kelayakan peranti</string>
+    <string name="app_lock_timeout_title">Had masa kunci automatik</string>
+    <string name="app_lock_timeout_summary">Tempoh masa selepas apl yang dibuka kunci di latar belakang perlu dikunci</string>
+    <string name="app_lock_notifications_title">Samarkan pemberitahuan</string>
+    <string name="app_lock_notifications_summary">Kandungan pemberitahuan akan disembunyikan dan diruntuhkan untuk apl terpilih apabila dikunci. Pemberitahuan heads-up akan dinyahdayakan secara automatik.</string>
+    <string name="app_lock_notifications_disabled_summary">Lindungi apl terlebih dahulu</string>
+    <string name="app_lock_biometrics_allowed_title">Dayakan biometrik untuk membuka kunci</string>
+    <string name="app_lock_footer_text">Buih pemberitahuan akan ditutup secara automatik selepas tamat masa</string>
+    <string name="enable_protection">Dayakan perlindungan</string>
+    <string name="hide_from_launcher_title">Sembunyikan daripada pelancar</string>
+    <string name="hide_from_launcher_summary">Cegah apl ini daripada dipaparkan dalam mana-mana pelancar. Memerlukan pelancar dimulakan semula untuk perubahan berkuat kuasa.</string>
+
+    <!-- Global Actions -->
+    <string name="power_off_verify_summary">Apabila peranti anda dikunci, anda perlu menggunakan kata laluan anda untuk mematikan kuasa atau memulakan semula.</string>
+    <string name="power_off_verify_title">Pengesahan matikan kuasa</string>
+
+    <!-- Notifications/Less boring heads up -->
+    <string name="notifications_less_boring_heads_up_title">Kurang gangguan</string>
+    <string name="notifications_less_boring_heads_up_summary">Paparkan pemberitahuan pop timbul hanya untuk apl penggera, pendail dan pemesejan</string>
+
+    <!-- Battery Saver -->
+    <string name="adaptive_battery_switch_title">Gunakan Bateri Adaptif</string>
+    <string name="basic_battery_saver_title">Penjimat Bateri Standard</string>
+    <string name="basic_battery_saver_summary">Mengehadkan kesan visual dan aktiviti latar belakang. Menghidupkan Tema gelap jika belum dihidupkan.</string>
+    <string name="battery_saver_reminder_category">Peringatan</string>
+    <string name="battery_saver_reminder_switch_title">Peringatan Penjimat Bateri</string>
+    <string name="battery_saver_reminder_switch_summary">Dapatkan peringatan apabila bateri lemah</string>
+    <string name="battery_saver_schedule_category">Jadual</string>
+    <string name="battery_saver_schedule_switch_title">Hidupkan berdasarkan tahap bateri</string>
+    <string name="battery_saver_schedule_switch_summary">Penjimat Bateri dihidupkan apabila bateri jatuh ke tahap yang anda tetapkan</string>
+    <string name="battery_schedule_title">Jadual dan peringatan</string>
+    <string name="battery_schedule_summary">Urus bila Penjimat Bateri dihidupkan</string>
+    <string name="extreme_battery_saver_title">Penjimat Bateri Melampau</string>
+    <string name="extreme_battery_saver_summary">Merangkumi semua perubahan yang disenaraikan di atas. Juga menjeda apl tidak penting dan pemberitahuannya.</string>
+    <string name="smart_battery_a11y_expand_label">Kembangkan, Bateri Adaptif</string>
+    <string name="smart_battery_a11y_collapse_label">Runtuhkan, Bateri Adaptif</string>
+    <string name="smart_battery_title">Bateri Adaptif</string>
+    <string name="unified_battery_saver_page_intro">Jimatkan kuasa untuk membantu bateri telefon anda bertahan lebih lama antara pengecasan</string>
+
+    <!-- Running services - Background processes tab -->
+    <string name="background_processes_settings_title">Proses latar belakang</string>
+
+    <!-- Running services - Background processes tab -->
+    <string name="custom_carrier_sim1_title">Teks pembawa tersuai (SIM 1)</string>
+    <string name="custom_carrier_sim1_summary">Tetapkan teks nama pembawa tersuai untuk SIM 1</string>
+    <string name="custom_carrier_sim1_dialog_title">Masukkan teks pembawa tersuai untuk SIM 1</string>
+
+    <string name="custom_carrier_sim2_title">Teks pembawa tersuai (SIM 2)</string>
+    <string name="custom_carrier_sim2_summary">Tetapkan teks nama pembawa tersuai untuk SIM 2</string>
+    <string name="custom_carrier_sim2_dialog_title">Masukkan teks pembawa tersuai untuk SIM 2</string>
+
+    <!-- Display settings screen, color balance category title [CHAR LIMIT=30] -->
+    <string name="color_mode_balance_category">Keseimbangan warna</string>
+
+    <!-- Display settings screen, red color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_red">Kekuatan merah</string>
+
+    <!-- Display settings screen, green color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_green">Kekuatan hijau</string>
+
+    <!-- Display settings screen, blue color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_blue">Kekuatan biru</string>
+    <string name="keywords_color_balance">warna, keseimbangan warna, pembetulan warna, merah, hijau, biru, LiveDisplay</string>
+
+    <!-- Navbar options -->
+    <string name="navbar_category">Bar navigasi</string>
+    <string name="show_navbar_hint_title">Petunjuk navigasi</string>
+    <string name="show_navbar_hint_summary">Tunjukkan bar petunjuk navigasi di bahagian bawah skrin</string>
+
+    <!-- IME button space -->
+    <string name="navbar_ime_category">Ruang Butang IME</string>
+    <string name="show_ime_space_title">Tunjukkan ruang butang IME</string>
+    <string name="show_ime_space_summary">Dayakan ciri pertukaran pantas kaedah input untuk menukar kaedah input atau menyembunyikan papan kekunci pada skrin daripada bar ciri di bahagian bawah skrin semasa menaip</string>
+
+    <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Animasi skrin mati</string>
+    <string name="screen_off_animation_default">Lalai</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Skala</string>
+
+    <!-- Per-app volume -->
+    <string name="app_volume">Kelantangan apl</string>
+    <string name="app_volume_title">Kawalan kelantangan setiap apl</string>
+    <string name="app_volume_summary">Tunjukkan butang kelantangan setiap apl dalam dialog kelantangan</string>
+
+    <!-- backup -->
+    <string name="local_app_backup_restore_title">Sandarkan &amp; pulihkan apl</string>
+    <string name="local_app_backup_restore_summary">Sandarkan apl dan datanya, atau pulihkan kemudian</string>
+
+</resources>

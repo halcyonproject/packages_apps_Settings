@@ -25,7 +25,10 @@ public class ResourceUtils {
     public static String getLocalizedString(final Resources res,
                                             final String stringName,
                                             final String stringFormat) {
-        final String name = stringName.toLowerCase().replace(" ", "_");
+        if (stringName == null) {
+            return null;
+        }
+        final String name = stringName.toLowerCase().replace(" ", "_").replace("-", "_");
         final String nameRes = String.format(stringFormat, name);
         return getStringForResourceName(res, nameRes, stringName);
     }
@@ -35,7 +38,7 @@ public class ResourceUtils {
                                                   final String defaultValue) {
         final int resId = res.getIdentifier(resourceName, "string", "com.android.settings");
         if (resId <= 0) {
-            Log.e(TAG, "No resource found for " + resourceName);
+            Log.d(TAG, "No resource found for " + resourceName);
             return defaultValue;
         } else {
             return res.getString(resId);

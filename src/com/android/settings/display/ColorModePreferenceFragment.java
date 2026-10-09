@@ -32,6 +32,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings.Secure;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -39,6 +40,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -46,7 +48,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.RadioButtonPickerFragment;
+import com.android.settings.widget.SeekBarPreference;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.ButtonPreference;
 import com.android.settingslib.widget.CandidateInfo;
 import com.android.settingslib.widget.LayoutPreference;
 
@@ -61,6 +65,7 @@ import java.util.Map;
 public class ColorModePreferenceFragment extends RadioButtonPickerFragment {
 
     private static final String KEY_COLOR_MODE_PREFIX = "color_mode_";
+    private static final String KEY_COLOR_BALANCE_RESET = "color_balance_reset";
 
     private static final int COLOR_MODE_FALLBACK = COLOR_MODE_NATURAL;
 
@@ -210,11 +215,46 @@ public class ColorModePreferenceFragment extends RadioButtonPickerFragment {
         getPreferenceManager().inflateFromResource(screen.getContext(), R.xml.color_mode_settings,
                 screen);
 
-        for (int channel = 0; channel < 3; channel++) {
+        for (int channel = 0; channel < 6; channel++) {
             ColorBalancePreferenceController controller = new ColorBalancePreferenceController(
                     screen.getContext(), ColorBalancePreferenceController.channelToKey(channel));
             controller.displayPreference(screen);
         }
+
+        final Preference resetPref = screen.findPreference(KEY_COLOR_BALANCE_RESET);
+        if (resetPref instanceof ButtonPreference) {
+            ((ButtonPreference) resetPref).setOnClickListener(v -> resetToDefaults());
+        }
+        if (resetPref != null) {
+            resetPref.setOnPreferenceClickListener(preference -> {
+                resetToDefaults();
+                return true;
+            });
+        }
+    }
+
+    private void resetToDefaults() {
+        final PreferenceScreen screen = getPreferenceScreen();
+        for (int channel = 0; channel < 6; channel++) {
+            final int defaultValue = ColorBalancePreferenceController.getDefaultValue(channel);
+            mColorDisplayManager.setColorBalanceChannel(channel, defaultValue);
+            if (screen != null) {
+                final SeekBarPreference pref = screen.findPreference(
+                        ColorBalancePreferenceController.channelToKey(channel));
+                if (pref != null) {
+                    pref.setProgress(defaultValue);
+                }
+            }
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (TextUtils.equals(preference.getKey(), KEY_COLOR_BALANCE_RESET)) {
+            resetToDefaults();
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
     }
 
     @Override

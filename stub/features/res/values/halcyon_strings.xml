@@ -464,7 +464,16 @@
 
     <!-- Display settings screen, blue color balance setting slider [CHAR LIMIT=NONE] -->
     <string name="color_mode_balance_blue">Blue strength</string>
-    <string name="keywords_color_balance">color, color balance, color correction, red, green, blue, LiveDisplay</string>
+
+    <!-- Display settings screen, hue color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_hue">Hue</string>
+
+    <!-- Display settings screen, saturation color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_saturation">Saturation</string>
+
+    <!-- Display settings screen, contrast color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_contrast">Contrast</string>
+    <string name="keywords_color_balance">color, color balance, color correction, red, green, blue, hue, saturation, contrast, LiveDisplay</string>
 
     <!-- Navbar options -->
     <string name="navbar_category">Navigation bar</string>

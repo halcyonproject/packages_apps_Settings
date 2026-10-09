@@ -73,14 +73,30 @@ public class ColorBalancePreferenceController extends SliderPreferenceController
 
     @Override
     public int getMax() {
-        // 8-bpc linear sRGB
-        return 255;
+        switch (mChannel) {
+            case 3: // Hue: 0-360 degrees, default 180 (0 shift)
+                return 360;
+            case 4: // Saturation: 0-200%, default 100%
+                return 200;
+            case 5: // Contrast: 50-150%, default 100%
+                return 150;
+            default: // 8-bpc linear sRGB
+                return 255;
+        }
     }
 
     @Override
     public int getMin() {
-        // Users shouldn't be able to (accidentally) make their display black. Limit it to 10%.
-        return 25;
+        switch (mChannel) {
+            case 3: // Hue
+                return 0;
+            case 4: // Saturation
+                return 0;
+            case 5: // Contrast (limit to 50% to prevent completely flat image)
+                return 50;
+            default: // Users shouldn't be able to (accidentally) make their display black. Limit it to 10%.
+                return 25;
+        }
     }
 
     private static int keyToChannel(String key) {
@@ -91,6 +107,12 @@ public class ColorBalancePreferenceController extends SliderPreferenceController
                 return 1;
             case "color_balance_blue":
                 return 2;
+            case "color_balance_hue":
+                return 3;
+            case "color_balance_saturation":
+                return 4;
+            case "color_balance_contrast":
+                return 5;
             default:
                 throw new IllegalArgumentException("Unknown key: " + key);
         }
@@ -104,6 +126,28 @@ public class ColorBalancePreferenceController extends SliderPreferenceController
                 return "color_balance_green";
             case 2:
                 return "color_balance_blue";
+            case 3:
+                return "color_balance_hue";
+            case 4:
+                return "color_balance_saturation";
+            case 5:
+                return "color_balance_contrast";
+            default:
+                throw new IllegalArgumentException("Unknown channel: " + channel);
+        }
+    }
+
+    public static int getDefaultValue(int channel) {
+        switch (channel) {
+            case 0:
+            case 1:
+            case 2:
+                return 255;
+            case 3:
+                return 180;
+            case 4:
+            case 5:
+                return 100;
             default:
                 throw new IllegalArgumentException("Unknown channel: " + channel);
         }

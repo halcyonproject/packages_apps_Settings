@@ -5999,4 +5999,40 @@
     <string name="safety_center_account_security_search_terms" msgid="3950829613581775913"></string>
     <string name="safety_center_device_finder_search_terms" msgid="452013643838126923"></string>
     <string name="safety_center_system_component_update_search_terms" msgid="3110390275537109543"></string>
+    <string name="app_lock_packages_summary">Выберите приложения для защиты биометрией или паролем</string>
+    <string name="app_lock_title">Блокировка приложений</string>
+    <string name="assisted_gps">Использовать A-GPS</string>
+    <string name="assisted_gps_summary">Загружать данные спутников из интернета для ускорения GPS. Для экстренных вызовов A-GPS всегда разрешён.</string>
+    <string name="charging_control_summary">Настройка расписания и ограничений зарядки</string>
+    <string name="charging_control_title">Управление зарядкой</string>
+    <string name="display_cutout_force_fullscreen_summary">Растягивать приложения на область выреза</string>
+    <string name="display_cutout_force_fullscreen_title">Приложения на весь экран</string>
+    <string name="gms_enabled_title">Сервисы Google</string>
+    <string name="halcyon_version_title">Версия Halcyon</string>
+    <string name="heads_up_notifications_enabled_summary">Показывать важные уведомления во всплывающем окне</string>
+    <string name="heads_up_notifications_enabled_title">Всплывающие уведомления</string>
+    <string name="high_touch_polling_rate_summary">Увеличить частоту опроса сенсора</string>
+    <string name="high_touch_polling_rate_title">Повышенная частота опроса</string>
+    <string name="high_touch_sensitivity_summary">Повысить чувствительность для работы в перчатках</string>
+    <string name="high_touch_sensitivity_title">Высокая чувствительность</string>
+    <string name="icon_manager_summary">Настройка отображения значков строки состояния</string>
+    <string name="icon_manager_title">Значки в строке состояния</string>
+    <string name="live_display_summary">Оптимизировать экран по времени суток и освещению для удобства чтения</string>
+    <string name="network_traffic_state_summary">Включить индикатор скорости сети в строке состояния</string>
+    <string name="network_traffic_state_title">Индикатор трафика</string>
+    <string name="network_traffic_title">Индикатор трафика</string>
+    <string name="notifications_less_boring_heads_up_summary">Показывать всплывающие только для будильника, телефона и сообщений</string>
+    <string name="notifications_less_boring_heads_up_title">Только важное во всплывающих</string>
+    <string name="override_mock_location_title">Разрешить подмену местоположения</string>
+    <string name="proximity_wake_summary">Проверять датчик приближения перед включением экрана</string>
+    <string name="proximity_wake_title">Защита от случайного включения</string>
+    <string name="quicksettings_preferences_title">Быстрые настройки</string>
+    <string name="radio_info_title">Сведения о радиомодуле</string>
+    <string name="refresh_rate_title">Частота обновления</string>
+    <string name="screenshot_shutter_sound_title">Звук скриншота</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Дважды коснитесь строки состояния или экрана блокировки для выключения экрана</string>
+    <string name="status_bar_double_tap_to_sleep_title">Касание для выключения</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении/отключении питания</string>
+    <string name="wake_when_plugged_or_unplugged_title">Включение при подключении</string>
+    <string name="wellbeing_title">Цифровое благополучие</string>
 </resources>

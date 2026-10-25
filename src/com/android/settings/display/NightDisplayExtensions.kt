@@ -34,8 +34,9 @@ val Context.nightDisplayAvailabilityStatus: Int
         return if (nightDisplayAvailable) {
             try {
                 // These settings are not available if shown on an external display.
-                if (display.isInternal) AVAILABLE else CONDITIONALLY_UNAVAILABLE
-            } catch (e: UnsupportedOperationException) {
+                val d = display
+                if (d == null || d.isInternal) AVAILABLE else CONDITIONALLY_UNAVAILABLE
+            } catch (e: Exception) {
                 // This context is not associated with a display, no reason to hide the settings.
                 AVAILABLE
             }

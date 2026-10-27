@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2023 The Android Open Source Project
+ * SPDX-FileCopyrightText: 2026 Halcyon Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,13 +27,23 @@ class SystemUpdateRepository(context: Context) {
 
     /**
      * Finds a matching activity for the system update intent.
+     * Prioritizes the Halcyon Updater app if available.
      */
     fun getSystemUpdateIntent(): Intent? {
-        val intent = Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS)
-        return packageManager.resolveActivity(intent, PackageManager.MATCH_SYSTEM_ONLY)
-            ?.activityInfo
-            ?.let { activityInfo ->
-                Intent().setClassName(activityInfo.packageName, activityInfo.name)
-            }
+        val halcyonIntent = Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS)
+            .setPackage(HALCYON_UPDATER_PACKAGE)
+        val resolveInfo = packageManager.resolveActivity(halcyonIntent, PackageManager.MATCH_SYSTEM_ONLY)
+            ?: packageManager.resolveActivity(
+                Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS),
+                PackageManager.MATCH_SYSTEM_ONLY,
+            )
+
+        return resolveInfo?.activityInfo?.let { activityInfo ->
+            Intent().setClassName(activityInfo.packageName, activityInfo.name)
+        }
+    }
+
+    private companion object {
+        const val HALCYON_UPDATER_PACKAGE = "org.hlcyn.updater"
     }
 }

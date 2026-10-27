@@ -112,7 +112,7 @@ class SystemUpdatePreferenceControllerTest {
     }
 
     @Test
-    fun updateState_systemUpdateStatusUnknown_shouldSetToAndroidVersion() {
+    fun updateState_systemUpdateStatusUnknown_shouldSetToNull() {
         val bundle = Bundle().apply {
             putInt(SystemUpdateManager.KEY_STATUS, SystemUpdateManager.STATUS_UNKNOWN)
         }
@@ -122,16 +122,11 @@ class SystemUpdatePreferenceControllerTest {
         controller.onViewCreated(TestLifecycleOwner())
         SystemClock.sleep(100)
 
-        assertThat(preference.summary).isEqualTo(
-            context.getString(
-                R.string.android_version_summary,
-                Build.VERSION.RELEASE_OR_PREVIEW_DISPLAY,
-            )
-        )
+        assertThat(preference.summary).isNull()
     }
 
     @Test
-    fun updateState_systemUpdateStatusIdle_shouldSetToAndroidVersion() {
+    fun updateState_systemUpdateStatusIdle_shouldSetToNull() {
         val testReleaseName = "ANDROID TEST VERSION"
         val bundle = Bundle().apply {
             putInt(SystemUpdateManager.KEY_STATUS, SystemUpdateManager.STATUS_IDLE)
@@ -143,8 +138,7 @@ class SystemUpdatePreferenceControllerTest {
         controller.onViewCreated(TestLifecycleOwner())
         SystemClock.sleep(100)
 
-        assertThat(preference.summary)
-            .isEqualTo(context.getString(R.string.android_version_summary, testReleaseName))
+        assertThat(preference.summary).isNull()
     }
 
     @Test

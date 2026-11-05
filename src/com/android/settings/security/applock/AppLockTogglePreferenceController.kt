@@ -14,36 +14,17 @@
  * limitations under the License.
  */
 
-package com.android.settings.security.applock;
+package com.android.settings.security.applock
 
 import android.content.Context
-import android.widget.CompoundButton
-import android.widget.CompoundButton.OnCheckedChangeListener
-
-import androidx.preference.Preference
-import androidx.preference.PreferenceScreen
 
 import com.android.settings.R
 import com.android.settings.core.TogglePreferenceController
-import com.android.settingslib.widget.MainSwitchPreference
 
 abstract class AppLockTogglePreferenceController(
     context: Context,
     key: String,
-) : TogglePreferenceController(context, key),
-    OnCheckedChangeListener {
-
-    override fun displayPreference(screen: PreferenceScreen) {
-        super.displayPreference(screen)
-        val preference = screen.findPreference<Preference>(preferenceKey) ?: return
-        if (preference is MainSwitchPreference) {
-            preference.addOnSwitchChangeListener(this)
-        }
-    }
-
-    override fun onCheckedChanged(buttonView: CompoundButton, isChecked: Boolean) {
-        setChecked(isChecked)
-    }
+) : TogglePreferenceController(context, key) {
 
     override fun getSliceHighlightMenuRes() = R.string.menu_key_security
 }

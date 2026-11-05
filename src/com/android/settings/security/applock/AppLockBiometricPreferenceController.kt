@@ -61,16 +61,19 @@ class AppLockBiometricPreferenceController(
     override fun isChecked() = isBiometricsAllowed
 
     override fun setChecked(checked: Boolean): Boolean {
-        if (isBiometricsAllowed == checked) return false
-        isBiometricsAllowed = checked
-        coroutineScope.launch(Dispatchers.Default) {
-            appLockManager.setBiometricsAllowed(isBiometricsAllowed)
+        if (isBiometricsAllowed != checked) {
+            isBiometricsAllowed = checked
+            coroutineScope.launch(Dispatchers.Default) {
+                appLockManager.setBiometricsAllowed(isBiometricsAllowed)
+            }
         }
         return true
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
         super.displayPreference(screen)
-        preference = screen.findPreference(preferenceKey)
+        val pref = screen.findPreference<Preference>(preferenceKey)
+        preference = pref
+        pref?.let { updateState(it) }
     }
 }

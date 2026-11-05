@@ -67,8 +67,7 @@ class AppLockPackageConfigFragment : DashboardFragment() {
         context: Context
     ) : List<AbstractPreferenceController> = listOf(
         AppLockPackageProtectionPC(context, packageInfo.packageName, lifecycleScope),
-        AppLockNotificationRedactionPC(context, packageInfo.packageName, lifecycleScope),
-        AppLockHideAppPC(context, packageInfo.packageName, lifecycleScope)
+        AppLockNotificationRedactionPC(context, packageInfo.packageName, lifecycleScope)
     )
 
     override fun getMetricsCategory(): Int = MetricsProto.MetricsEvent.HALCYON

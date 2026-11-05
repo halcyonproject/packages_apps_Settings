@@ -19,7 +19,6 @@ package com.android.settings.security.applock
 import android.app.AppLockManager
 import android.content.Context
 
-import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
 
@@ -43,9 +42,7 @@ class AppLockPackageProtectionPC(
     init {
         coroutineScope.launch {
             isProtected = withContext(Dispatchers.Default) {
-                appLockManager.packageData.find {
-                    it.packageName == packageName
-                }?.shouldProtectApp == true
+                appLockManager.isPackageProtected(packageName)
             }
             preference?.let {
                 updateState(it)
@@ -58,16 +55,19 @@ class AppLockPackageProtectionPC(
     override fun isChecked() = isProtected
 
     override fun setChecked(checked: Boolean): Boolean {
-        if (isProtected == checked) return false
-        isProtected = checked
-        coroutineScope.launch(Dispatchers.Default) {
-            appLockManager.setShouldProtectApp(packageName, isProtected)
+        if (isProtected != checked) {
+            isProtected = checked
+            coroutineScope.launch(Dispatchers.Default) {
+                appLockManager.setShouldProtectApp(packageName, isProtected)
+            }
         }
         return true
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
         super.displayPreference(screen)
-        preference = screen.findPreference(preferenceKey)
+        val pref = screen.findPreference<Preference>(preferenceKey)
+        preference = pref
+        pref?.let { updateState(it) }
     }
 }

@@ -57,16 +57,19 @@ class AppLockNotificationRedactionPC(
     override fun isChecked() = shouldRedactNotification
 
     override fun setChecked(checked: Boolean): Boolean {
-        if (shouldRedactNotification == checked) return false
-        shouldRedactNotification = checked
-        coroutineScope.launch(Dispatchers.Default) {
-            appLockManager.setShouldRedactNotification(packageName, checked)
+        if (shouldRedactNotification != checked) {
+            shouldRedactNotification = checked
+            coroutineScope.launch(Dispatchers.Default) {
+                appLockManager.setShouldRedactNotification(packageName, checked)
+            }
         }
         return true
     }
 
     override fun displayPreference(screen: PreferenceScreen) {
         super.displayPreference(screen)
-        preference = screen.findPreference(preferenceKey)
+        val pref = screen.findPreference<Preference>(preferenceKey)
+        preference = pref
+        pref?.let { updateState(it) }
     }
 }

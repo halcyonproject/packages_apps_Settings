@@ -439,6 +439,12 @@
             android:entries="@array/animator_duration_scale_entries"
             android:entryValues="@array/animator_duration_scale_values" />
 
+        <com.android.settings.halcyon.preference.SystemPropertySwitchPreference
+            android:key="persist.sys.activity_anim_perf_override"
+            android:title="@string/activity_anim_perf_override_title"
+            android:summary="@string/activity_anim_perf_override_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="overlay_display_devices"
             android:title="@string/overlay_display_devices_title"

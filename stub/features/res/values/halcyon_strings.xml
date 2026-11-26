@@ -540,4 +540,8 @@
     <string name="spoof_show_system">Show system apps</string>
     <string name="spoof_filter">Filter</string>
     <string name="spoof_no_apps">No matching apps</string>
+
+    <!-- Performance activity animations -->
+    <string name="activity_anim_perf_override_title">Lightweight activity animations</string>
+    <string name="activity_anim_perf_override_summary">Use lightweight spring and alpha animations for activity transitions</string>
 </resources>

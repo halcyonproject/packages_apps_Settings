@@ -18,6 +18,7 @@ package com.android.settings.system
 
 import android.content.ContentResolver
 import android.content.Context
+import android.os.SystemProperties
 import android.provider.Settings
 import android.util.Log
 import com.android.settings.R
@@ -72,12 +73,27 @@ class ShadePanelsPreferenceController(context: Context, key: String) :
 
         @AvailabilityStatus
         internal fun getDualShadeAvailability(context: Context): Int {
-            if (!Flags.sceneContainer()) {
+            val isLargeScreen = SystemProperties.getBoolean("ro.halcyon.device.large", false)
+            val isLowEnd = SystemProperties.getBoolean("ro.halcyon.device.lowend", false)
+            val sceneContainerEnabled =
+                SystemProperties.getBoolean(
+                    "persist.sys.scene_container",
+                    SystemProperties.getBoolean(
+                        "ro.config.scene_container",
+                        isLargeScreen && !isLowEnd,
+                    ),
+                )
+            if (!Flags.sceneContainer() || !sceneContainerEnabled) {
                 Log.i(TAG, "Scene container is disabled")
                 return CONDITIONALLY_UNAVAILABLE
             }
 
-            if (!Flags.dualShade()) {
+            val dualShadeEnabled =
+                SystemProperties.getBoolean(
+                    "persist.sys.dual_shade",
+                    SystemProperties.getBoolean("ro.config.dual_shade", sceneContainerEnabled),
+                )
+            if (!Flags.dualShade() || !dualShadeEnabled) {
                 Log.i(TAG, "Dual Shade is disabled")
                 return CONDITIONALLY_UNAVAILABLE
             }
